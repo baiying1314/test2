@@ -3,8 +3,8 @@
 function thousands_separators(num) {
     var numString = buildNumString(num);
     var stringArray = buildStringArray(numString);
-    return buildThousandsSeparator(numString, stringArray);
 
+    return buildThousandsSeparator(numString, stringArray);
 }
 
 function buildNumString(num) {
@@ -42,8 +42,8 @@ function buildIntSeparator(stringArray) {
     }
 
     return (stringArray.join(''));
-
 }
+
 function buildFloatSeparator(stringArray) {
     for (var i = stringArray.length - 1; stringArray[i] != '.'; i--);
     for (i = i - 3; i >= 0; i -= 3) {
@@ -52,6 +52,5 @@ function buildFloatSeparator(stringArray) {
 
     return stringArray.join('');
 }
-
 
 module.exports = thousands_separators;
